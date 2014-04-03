@@ -1,0 +1,45 @@
+\documentclass[12pt]{article}   % Font size and document style.
+\usepackage[utf8]{inputenc}     % Character encoding of input txt.
+\usepackage[T1]{fontenc}        % Font encoding to use.
+\usepackage{kpfonts}            % Beautiful fonts.
+\usepackage{geometry}           % Layout options.
+\geometry{letterpaper}          % ... or a4paper or a5paper or ...
+\usepackage{setspace}           % For controlling line spacing.
+\usepackage{amsmath}            % Extra math environment symbols.
+\usepackage{amssymb}            % Some mathy symbols.
+\usepackage{titling}            % Allows fancyhdr to reference title.
+\usepackage{lastpage}           % Allows ref to last page in header.
+\usepackage{fancyhdr}
+%\fancyhead[LE]{\thetitle}
+\fancyhead[RO]{Brickley}
+%\lhead[]{} \chead[]{\thetitle} \rhead[]{Brickley}
+\lfoot[]{} \cfoot[]{\thepage\ of \pageref{LastPage}} \rfoot[]{}
+\headheight = 14.49998pt        % Works because magic.
+\pagestyle{fancy}               % Sets style for non-title pages.
+\usepackage{hyperref}           % Links in the document.
+\usepackage[numbers]{natbib}    % Makes citations nonbad.
+%
+%
+$if(title)$
+    \title{$title$}
+    \rhead[]{\thetitle}
+$endif$
+
+
+\author{$for(author)$$author$$sep$ \and $endfor$}
+\date{$date$}
+%
+%
+\begin{document}
+if (title)
+    \maketitle
+endif
+
+\doublespace
+%
+<++>
+%
+\singlespace
+\bibliographystyle{unsrtnat}
+\bibliography{/Users/clickityclack/Dropbox/bibliography}
+\end{document}  
