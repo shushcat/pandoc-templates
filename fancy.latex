@@ -25,21 +25,6 @@ $endif$
 \else
     \usepackage{fontspec}
 \fi
-\defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
-\newcommand{\euro}{€}
-$if(mainfont)$
-    \setmainfont{$mainfont$}
-$endif$
-$if(sansfont)$
-    \setsansfont{$sansfont$}
-$endif$
-$if(monofont)$
-    \setmonofont{$monofont$}
-$endif$
-$if(mathfont)$
-    \setmathfont(Digits,Latin,Greek){$mathfont$}
-$endif$
-\fi
 % use microtype if available
 \IfFileExists{microtype.sty}{\usepackage{microtype}}{}
 $if(geometry)$
@@ -154,7 +139,6 @@ $endif$
 
 $for(include-before)$
     $include-before$
-
 $endfor$
 $if(toc)$
 {
